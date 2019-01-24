@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'SimPerf_Example' do
+  pod 'SimPerf', :path => '../'
+
+  target 'SimPerf_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
