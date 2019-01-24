@@ -7,6 +7,7 @@
 //
 
 @import UIKit;
+@import SimPerf;
 
 @interface SGViewController : UIViewController
 

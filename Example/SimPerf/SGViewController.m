@@ -17,13 +17,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    [Simperf beginLoggingWithServerURL:@"http://localhost:3000/methods/addLaunchData"];
+    [Simperf start:@"AppStart"];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [Simperf stop:@"AppStart"];
+        [Simperf finishLogging];
+    });
 }
 
 @end
