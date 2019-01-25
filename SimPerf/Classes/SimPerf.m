@@ -72,7 +72,7 @@
 
 - (void)finishLogging {
     NSDictionary *launchData = @{@"startTime": [NSNumber numberWithDouble:([startTime timeIntervalSince1970] * 1000)],
-                                 @"device": @{@"name": @"iPhone"},
+                                 @"device": @{@"name": [SDVersion deviceNameString]},
                                  @"details": self.output,
                                  @"finished": @YES
                                  };

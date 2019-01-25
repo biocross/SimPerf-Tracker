@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <mach/mach_time.h>
+@import SDVersion;
 
 @interface Simperf : NSObject
 
