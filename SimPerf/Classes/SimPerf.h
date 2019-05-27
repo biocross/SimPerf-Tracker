@@ -9,6 +9,7 @@
 #import <mach/mach_time.h>
 #import "CarrierInfo.h"
 @import SDVersion;
+@import Tumbleweed;
 
 @interface Simperf : NSObject
 

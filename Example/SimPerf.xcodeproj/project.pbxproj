@@ -308,6 +308,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SimPerf_Example/Pods-SimPerf_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SDVersion/SDVersion.framework",
 				"${BUILT_PRODUCTS_DIR}/SimPerf/SimPerf.framework",
+				"${BUILT_PRODUCTS_DIR}/Tumbleweed/Tumbleweed.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -315,6 +316,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDVersion.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimPerf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tumbleweed.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
