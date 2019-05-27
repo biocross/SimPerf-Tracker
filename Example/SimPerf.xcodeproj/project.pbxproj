@@ -38,9 +38,7 @@
 
 /* Begin PBXFileReference section */
 		111FDFD1DBFD10FBDA715D05 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		112FE8DA5EAD727E9F10FDCB /* Pods-SimPerf_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimPerf_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SimPerf_Tests/Pods-SimPerf_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		33B9DA937EEFEFC226B522F3 /* Pods-SimPerf_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimPerf_Example.release.xcconfig"; path = "Target Support Files/Pods-SimPerf_Example/Pods-SimPerf_Example.release.xcconfig"; sourceTree = "<group>"; };
-		5E56B176F8B61291F8C1CEA9 /* Pods-SimPerf_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimPerf_Tests.release.xcconfig"; path = "Target Support Files/Pods-SimPerf_Tests/Pods-SimPerf_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		1F00D54FF3EB40020DA61AE1 /* Pods-SimPerf_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimPerf_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimPerf_Example/Pods-SimPerf_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* SimPerf_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimPerf_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,17 +58,15 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		661D83324AC5C887A1705E86 /* Pods-SimPerf_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimPerf_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimPerf_Example/Pods-SimPerf_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		70AC7B80DA534CF898B7ED1D /* Pods-SimPerf_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimPerf_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimPerf_Tests/Pods-SimPerf_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82E47ECD0FDC382F7DA314B5 /* Pods_SimPerf_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimPerf_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85DBA6058BCD5079595F3283 /* SimPerf.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SimPerf.podspec; path = ../SimPerf.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8B493633144D2863537953B4 /* Pods-SimPerf_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimPerf_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimPerf_Example/Pods-SimPerf_Example.release.xcconfig"; sourceTree = "<group>"; };
-		95A9AFCB61D078B5435404C3 /* Pods-SimPerf_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimPerf_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimPerf_Tests/Pods-SimPerf_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		9601B0D85240A32CBD24A79E /* Pods-SimPerf_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimPerf_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimPerf_Example/Pods-SimPerf_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A437DD3B321CCDDBDAF1682B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		C744E06748C68CC9EE4D8FEA /* Pods-SimPerf_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimPerf_Example.debug.xcconfig"; path = "Target Support Files/Pods-SimPerf_Example/Pods-SimPerf_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		B911617895F600DF478018F5 /* Pods-SimPerf_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimPerf_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimPerf_Tests/Pods-SimPerf_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C7CBF8BB8DA75B6902E2FD93 /* Pods_SimPerf_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimPerf_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F58F9EEBBFE4747F5FDF2498 /* Pods-SimPerf_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimPerf_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimPerf_Tests/Pods-SimPerf_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +103,7 @@
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				9F6127C3B0DB900F723CF2EF /* Pods */,
+				C04F9FC02B8E335D912034B0 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,19 +185,15 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		9F6127C3B0DB900F723CF2EF /* Pods */ = {
+		C04F9FC02B8E335D912034B0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C744E06748C68CC9EE4D8FEA /* Pods-SimPerf_Example.debug.xcconfig */,
-				33B9DA937EEFEFC226B522F3 /* Pods-SimPerf_Example.release.xcconfig */,
-				112FE8DA5EAD727E9F10FDCB /* Pods-SimPerf_Tests.debug.xcconfig */,
-				5E56B176F8B61291F8C1CEA9 /* Pods-SimPerf_Tests.release.xcconfig */,
-				661D83324AC5C887A1705E86 /* Pods-SimPerf_Example.debug.xcconfig */,
-				8B493633144D2863537953B4 /* Pods-SimPerf_Example.release.xcconfig */,
-				95A9AFCB61D078B5435404C3 /* Pods-SimPerf_Tests.debug.xcconfig */,
-				70AC7B80DA534CF898B7ED1D /* Pods-SimPerf_Tests.release.xcconfig */,
+				1F00D54FF3EB40020DA61AE1 /* Pods-SimPerf_Example.debug.xcconfig */,
+				9601B0D85240A32CBD24A79E /* Pods-SimPerf_Example.release.xcconfig */,
+				F58F9EEBBFE4747F5FDF2498 /* Pods-SimPerf_Tests.debug.xcconfig */,
+				B911617895F600DF478018F5 /* Pods-SimPerf_Tests.release.xcconfig */,
 			);
-			path = Pods;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -533,7 +525,7 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C744E06748C68CC9EE4D8FEA /* Pods-SimPerf_Example.debug.xcconfig */;
+			baseConfigurationReference = 1F00D54FF3EB40020DA61AE1 /* Pods-SimPerf_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -553,7 +545,7 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33B9DA937EEFEFC226B522F3 /* Pods-SimPerf_Example.release.xcconfig */;
+			baseConfigurationReference = 9601B0D85240A32CBD24A79E /* Pods-SimPerf_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -572,7 +564,7 @@
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 112FE8DA5EAD727E9F10FDCB /* Pods-SimPerf_Tests.debug.xcconfig */;
+			baseConfigurationReference = F58F9EEBBFE4747F5FDF2498 /* Pods-SimPerf_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -596,7 +588,7 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E56B176F8B61291F8C1CEA9 /* Pods-SimPerf_Tests.release.xcconfig */;
+			baseConfigurationReference = B911617895F600DF478018F5 /* Pods-SimPerf_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

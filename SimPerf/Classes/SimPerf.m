@@ -12,6 +12,7 @@
 
 @interface Simperf()
 @property NSString *serverURL;
+@property BOOL fileDumpEnabled;
 @property NSMutableDictionary *watches;
 @end
 
@@ -27,6 +28,7 @@
     _sharedInstance.watches = [NSMutableDictionary new];
     _sharedInstance.output = [NSMutableArray new];
     _sharedInstance.serverURL = defaultDataURL;
+    _sharedInstance.fileDumpEnabled = NO;
   });
 
   return _sharedInstance;
@@ -35,6 +37,10 @@
 + (void)beginLoggingWithServerURL: (NSString *)serverURL {
   [[Simperf shared] setServerURL:serverURL];
   [[Simperf shared] beginLogging];
+}
+
++ (void)enableFileDump: (BOOL)enabled {
+  [[Simperf shared] setFileDumpEnabled:enabled];
 }
 
 + (void)start:(NSString *)name {
@@ -73,20 +79,29 @@
 }
 
 - (void)finishLogging {
-  NSDictionary *launchData = @{@"startTime": [NSNumber numberWithDouble:([startTime timeIntervalSince1970] * 1000)],
-                               @"device": @{@"name": [SDVersion deviceNameString]},
-                               @"details": self.output,
-                               @"finished": @YES
-                               };
+  NSMutableDictionary *launchData = @{@"startTime": [NSNumber numberWithDouble:([startTime timeIntervalSince1970] * 1000)],
+                                      @"device": @{@"name": [SDVersion deviceNameString]},
+                                      @"details": self.output,
+                                      @"carrier": [CarrierInfo getCarrierInformation],
+                                      @"finished": @YES
+                                      };
 
-  NSData *data = [NSJSONSerialization dataWithJSONObject:launchData options:NSJSONWritingPrettyPrinted error:nil];
+  NSData *data = [NSJSONSerialization dataWithJSONObject:launchData options:NSJSONWritingPrettyPrinted error:nil];\
+
+  if(_fileDumpEnabled) {
+    NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSArray *paths = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
+    if (paths.count > 0) {
+      NSURL *documentsDirectory = paths[0];
+      NSURL *fileName = [documentsDirectory URLByAppendingPathComponent: [NSString stringWithFormat:@"%f.json", [[NSDate date] timeIntervalSince1970]]];\
+      [jsonString writeToFile:fileName atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    }
+  }
 
   NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:self.serverURL]];
   [request setHTTPMethod:@"POST"];
   request.HTTPBody = data;
   request.allHTTPHeaderFields = @{ @"Content-Type": @"application/json" };
-
-
   NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
   NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
   NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {

@@ -16,14 +16,15 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    
-    [Simperf beginLoggingWithServerURL:@"http://localhost:3000/methods/addLaunchData"];
-    [Simperf start:@"AppStart"];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [Simperf stop:@"AppStart"];
-        [Simperf finishLogging];
-    });
+  [super viewDidLoad];
+
+  [Simperf beginLoggingWithServerURL:@"http://localhost:3000/methods/addLaunchData"];
+  [Simperf enableFileDump:YES];
+  [Simperf start:@"AppStart"];
+  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    [Simperf stop:@"AppStart"];
+    [Simperf finishLogging];
+  });
 }
 
 @end
