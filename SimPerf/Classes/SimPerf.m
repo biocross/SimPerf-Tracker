@@ -79,7 +79,7 @@
 }
 
 - (void)finishLogging {
-  NSMutableDictionary *launchData = @{@"startTime": [NSNumber numberWithDouble:([startTime timeIntervalSince1970] * 1000)],
+  NSDictionary *launchData = @{@"startTime": [NSNumber numberWithDouble:([startTime timeIntervalSince1970] * 1000)],
                                       @"device": @{@"name": [SDVersion deviceNameString]},
                                       @"details": self.output,
                                       @"carrier": [CarrierInfo getCarrierInformation],
@@ -94,7 +94,7 @@
     if (paths.count > 0) {
       NSURL *documentsDirectory = paths[0];
       NSURL *fileName = [documentsDirectory URLByAppendingPathComponent: [NSString stringWithFormat:@"%f.json", [[NSDate date] timeIntervalSince1970]]];\
-      [jsonString writeToFile:fileName atomically:YES encoding:NSUTF8StringEncoding error:nil];
+      [jsonString writeToURL:fileName atomically:YES encoding:NSUTF8StringEncoding error:nil];
     }
   }
 
