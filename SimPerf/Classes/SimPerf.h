@@ -9,7 +9,6 @@
 #import <mach/mach_time.h>
 #import "CarrierInfo.h"
 @import SDVersion;
-@import Tumbleweed;
 
 @interface Simperf : NSObject
 
@@ -17,9 +16,12 @@
 
 + (void)beginLoggingWithServerURL: (nonnull NSString *)serverURL;
 + (void)enableFileDump: (BOOL)enabled;
++ (void)finishLogging;
+
 + (void)start:(nonnull NSString *)name;
 + (void)stop:(nonnull NSString *)name;
-+ (void)finishLogging;
++ (void)saveMetric:(nonnull NSDictionary *)metric;
+
 
 @property NSMutableArray *output;
 

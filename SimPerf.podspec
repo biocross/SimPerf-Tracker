@@ -32,5 +32,4 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'SimPerf/Classes/**/*'
   s.dependency 'SDVersion'
-  s.dependency 'Tumbleweed'
 end

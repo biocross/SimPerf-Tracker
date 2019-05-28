@@ -14,6 +14,7 @@
 @property NSString *serverURL;
 @property BOOL fileDumpEnabled;
 @property NSMutableDictionary *watches;
+@property NSMutableArray<NSDictionary *> *metrics;
 @end
 
 @implementation Simperf {
@@ -26,6 +27,7 @@
   dispatch_once(&onceToken, ^{
     _sharedInstance = [Simperf new];
     _sharedInstance.watches = [NSMutableDictionary new];
+    _sharedInstance.metrics = [NSMutableArray new];
     _sharedInstance.output = [NSMutableArray new];
     _sharedInstance.serverURL = defaultDataURL;
     _sharedInstance.fileDumpEnabled = NO;
@@ -53,6 +55,10 @@
 
 + (void)finishLogging {
   [[Simperf shared] finishLogging];
+}
+
++ (void)saveMetric:(NSDictionary *)metric {
+  [[[Simperf shared] metrics] addObject:metric];
 }
 
 #pragma mark Internal Simperf Instance
@@ -83,6 +89,7 @@
                                       @"device": @{@"name": [SDVersion deviceNameString]},
                                       @"details": self.output,
                                       @"carrier": [CarrierInfo getCarrierInformation],
+                                      @"metrics": self.metrics,
                                       @"finished": @YES
                                       };
 
