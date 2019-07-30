@@ -12,7 +12,7 @@
 
 @interface Simperf : NSObject
 
-+ (instancetype)shared;
++ (_Nonnull instancetype)shared;
 
 + (void)beginLoggingWithServerURL: (nonnull NSString *)serverURL;
 + (void)enableFileDump: (BOOL)enabled;
@@ -23,6 +23,6 @@
 + (void)saveMetric:(nonnull NSDictionary *)metric;
 
 
-@property NSMutableArray *output;
+@property NSMutableArray * _Nonnull output;
 
 @end
